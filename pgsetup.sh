@@ -25,7 +25,7 @@ chmod 600 $HOME"/.pgpass"
 # stackoverflow.com/a/5257398
 # goo.gl/X51Mwz
 PGPASS=`cat .pgpass`
-TOKS=${PGPASS//:/ }
+TOKS=(${PGPASS//:/ })
 PG_HOST=${TOKS[0]}
 PG_PORT=${TOKS[1]}
 PG_DB=${TOKS[2]}
